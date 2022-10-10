@@ -13,6 +13,8 @@ const CanvasScreen = () => {
     canvas.height = (90*window.innerHeight) / 100;
 
     const context = canvas.getContext("2d");
+    // context.fillStyle = "#FFFFF";
+    // context.fillRect(220,50,850,875);
     context.lineCap = "round";
     context.strokeStyle = "black";
     context.lineWidth = 5;
@@ -49,6 +51,21 @@ const CanvasScreen = () => {
     contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
   }
 
+  // const down=()=>{
+  //   var canvas = document.getElementById("mycanvas");
+  //   var img    = canvas.toDataURL("image/png");
+  //   document.write('<img src="'+img+'"/>');
+  // }
+
+  const download=()=>{
+    var canvas = document.getElementById("mycanvas");
+    var url = canvas.toDataURL("image/png");
+    var link = document.createElement('a');
+    link.download = 'filename.png';
+    link.href = url;
+    link.click();
+  }
+
   return (
     <div
       style={{
@@ -61,11 +78,12 @@ const CanvasScreen = () => {
       }}
     >
       <canvas
+        id="mycanvas"
         className="canvas-container"
         ref={canvasRef}
         onMouseDown={startDrawing}
         onMouseMove={draw}
-        onMouseUp={stopDrawing}
+        onMouseUp={()=>{download();stopDrawing()}}
         onMouseLeave={stopDrawing}
       ></canvas>
       <button onClick={clear} style={{border:'2px solid blue', marginTop:'2vh'}}>
