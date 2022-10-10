@@ -60,6 +60,7 @@ const CanvasScreen = () => {
   const download=()=>{
     var canvas = document.getElementById("mycanvas");
     var url = canvas.toDataURL("image/png");
+    // var url = canvas.toDataURL("image/jpeg");
     var link = document.createElement('a');
     link.download = 'filename.png';
     link.href = url;
