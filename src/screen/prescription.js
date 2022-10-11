@@ -13,12 +13,13 @@ const Prescription = () => {
         flexDirection: "column",
         alignItems: "center",
         // justifyContent: "center",
+        backgroundImage: 'linear-gradient(to right, #113ff5, #11f52f, #113ff5)',
         width: "100vw",
         height: "100vh",
         backgroundColor: "white",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "row", width: "97%", marginBottom:'1vw' }}>
+      <div style={{ display: "flex", flexDirection: "row", width: "100%", marginBottom:'1vw' }}>
         <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
           <div style={{display:'flex', justifyContent:'center', alignItems:'center',margin:'1vw',backgroundColor:'#D9D9D9', height:'18vh'}}>
             <p className="pres-title">DESTRATUM</p>
