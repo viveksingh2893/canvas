@@ -1,9 +1,12 @@
-import React from 'react';
-import CanvasScreen from './screen/canvasScreen';
+import React from "react";
+import Screen from "./screen";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <CanvasScreen/>
+    <BrowserRouter>
+      <Screen />
+    </BrowserRouter>
   );
 }
 
