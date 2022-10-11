@@ -11,25 +11,84 @@
 }
 .pres-container{
     display:flex;
-    justify-content:space-around;
-    /* border:1px solid black; */
-    width:100vw;
+    justify-content:left;
+    border:1px solid #fff;
     flex-direction:row;
     align-items:center;
     margin-top:.5vw;
 }
 .pres-title{
     display:'flex';
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.4vw;
-    line-height: 1.6vw;
+    
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     /* color: #000000; */
     color: white;
+    
+    width:100%;
     margin:0
 }
+.form_input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    margin: 0 auto; 
+    padding: 0.8rem 1rem;
+    border-radius: 0.2rem;
+    background-color: #cdbfbf;
+    border: none;
+    width: 90%;
+    display: flex;
+    
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+  }
+  .form_schedule {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    padding: 1.2rem;
+    border-radius: 0.2rem;
+    background-color: #cdbfbf;
+    border: none;
+    width: 0.5rem;
+    text-align: center;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+  }
+  
+  .form_input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+  }
+  .form_head {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+
+    background-color: rgb(11, 0, 0);
+    border: none;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color:#000000;
+
+    transition: all 0.3s;
+  }
+.form_head_bg{
+    background-color:#ffffff;
+
+}
+
 
 .submit-btn{
     background: #D9D9D9;
@@ -46,3 +105,35 @@
     margin-top: 5vh;
     cursor: pointer;
 }
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #000000;
+	border: none;
+	padding: 1.2rem 3rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+    color:beige;
+    border-radius:0.2rem;
+	display: inline-block;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.add_input{
+    display:flex;
+    width:25%;
+    border:1px solid white;
+    padding:0.5rem
+}
+
+

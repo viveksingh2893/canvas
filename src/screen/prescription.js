@@ -3,6 +3,7 @@ import Pres from "../components/prescription/pres";
 import "../assets/css/pres.css";
 import SvgIcon from "../assets/svgicon/svgicon";
 import { Input } from 'antd';
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 const { TextArea } = Input;
 
 const Prescription = () => {
@@ -13,50 +14,43 @@ const Prescription = () => {
         flexDirection: "column",
         alignItems: "center",
         // justifyContent: "center",
-        backgroundImage: 'linear-gradient(to right, #113ff5, #11f52f, #113ff5)',
-        width: "100vw",
-        height: "100vh",
-        backgroundColor: "white",
+       
       }}
     >
       <div style={{ display: "flex", flexDirection: "row", width: "100%", marginBottom:'1vw' }}>
-        <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-          <div style={{display:'flex', justifyContent:'center', alignItems:'center',margin:'1vw',backgroundColor:'#D9D9D9', height:'18vh'}}>
-            <p className="pres-title">DESTRATUM</p>
-          </div>
+        <div style={{ display: "flex", flexDirection: "column", width: "95%",padding:'1rem' }}>
+          {/* <div style={{display:'flex', justifyContent:'center', background:'#30C74E',alignItems:'center',backgroundColor:'#D9D9D9'}}>
+            <p className="pres-title"style={{fontSize:"1.2rem"}}>Destratum health</p>
+          </div> */}
           <SvgIcon name="prescription" width="5vw" height="5vh" />
         </div>
         <div style={{ display: "flex", alignItems: "flex-end",justifyContent:'center', width: "100%", }}>
-            <p className="pres-title" style={{fontSize:'2vw'}}>PRESCRIPTION</p>
+            <p className="pres-title" style={{fontSize:'1.5rem',fontWeight:"bold",color:'#000'}}>PRESCRIPTION</p>
         </div>
         <div style={{ display: "flex",flexDirection:'column',justifyContent:'center', alignItems: "center", width: "100%" }}>
-            <div>
-            <p className="pres-title" style={{fontSize:"2vw", textAlign:"left"}}>Dr.N.Thoufick,M.D</p>
-            <p className="pres-title" style={{fontSize:"1vw", textAlign:'left'}}>CONSULTANTS NEURO</p>
-            <p className="pres-title" style={{fontSize:"1vw", textAlign:'left'}}>REGD.NO</p>
-            <p className="pres-title" style={{fontSize:"1vw", textAlign:'left'}}>MOBILE NO:978542536</p>
+            <div >
+            <p className="pres-title" style={{fontSize:"1rem", color:'black',fontWeight:"bold",textAlign:"left"}}>Dr.N.Thoufick,M.D</p>
+            <p className="pres-title" style={{fontSize:"0.8rem", color:'black',textAlign:'left'}}>CONSULTANTS NEURO</p>
+            <p className="pres-title" style={{fontSize:"0.8rem", color:'black',textAlign:'left'}}>REGD.NO</p>
+            <p className="pres-title" style={{fontSize:"0.8rem", color:'black',textAlign:'left'}}>MOBILE NO:978542536</p>
             </div>
         </div>
       </div>
-      <div className="pres-main-container">
-        <p className="pres-title">MEDICINE</p>
-        <p className="pres-title">DOSE</p>
-        <p className="pres-title">TIMING- FREQ- DURATION</p>
-        <p className="pres-title">QTY</p>
+      <div className=" form_head " >
+        <p className="pres-title">Medicine</p>
+        <p className="pres-title">Dose</p>
+        <p className="pres-title">Time- Freq- Dur</p>
+        <p className="pres-title">Quantity</p>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          border: "1px solid black",
-        }}
-      >
+      
         <Pres />
-        <Pres />
-        <Pres />
+      <div className='form_head'style={{background:'#fff',justifyContent:'flex-end'}}> 
+      <button className="button"style={{background:'#30C74E',fontSize:'1rem'}}>
+        + Add 
+      </button>
       </div>
-      <button className="submit-btn">
-        <p style={{margin:0}}>SUBMIT</p>
+      <button className="button">
+        Submit
       </button>
     </div>
   );
